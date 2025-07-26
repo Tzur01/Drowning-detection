@@ -1,4 +1,4 @@
-# 🏊‍♀️ Drowning Detection System
+## Drowning Detection System 🏊‍♀️ 
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -54,13 +54,23 @@ source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 ```bash
 pip install -r requirements.txt
 ```
-make sure to download yolov4.weights and add it inside models/yolo/..
+
+**Important**: On first run, the system will automatically download YOLOv4 model files:
+- `yolov4.cfg` (~12KB) - Model configuration
+- `yolov4.weights` (~250MB) - Pre-trained weights
+- `coco_classes.txt` (~1KB) - Object class labels
+
+Ensure you have a stable internet connection and sufficient disk space.
+
+4. **Prepare test videos (optional):**
+```bash
+mkdir videos
+# Add your test video files to the videos/ folder
+```
+
 ### Usage
 
 #### Basic Usage
-
- create an videos/ folder and put inside it videos/sampels 
-
 ```bash
 python DrownDetect.py --source video_filename.mp4
 ```
@@ -83,7 +93,7 @@ python DrownDetect.py --source video.mp4 --confidence 0.6 --no-voice
 | `--confidence` | Object detection confidence threshold | 0.5 |
 | `--no-voice` | Disable voice alerts | False |
 
-## 🧠 How It Works
+## How It Works
 
 ### Detection Methods
 
@@ -98,7 +108,7 @@ The system uses a custom CNN with the following architecture:
 - 2 Fully connected layers with dropout for regularization
 - Softmax output for binary classification
 
-## ⚙️ Configuration
+## Configuration
 
 Edit `src/config.py` to customize:
 
@@ -111,7 +121,7 @@ class DetectionConfig:
     WINDOW_NAME = "Drowning Detection"  # Display window name
 ```
 
-## 🔧 Development
+
 
 ### Project Structure
 
@@ -129,66 +139,18 @@ drowning-detection/
 └── README.md
 ```
 
-### Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Style
-
-This project uses [Black](https://github.com/psf/black) for code formatting:
-```bash
-pip install black
-black src/ DrownDetect.py
-```
-
-## 📊 Performance
+## Performance
 
 The system achieves:
 - **Real-time processing**: 15-30 FPS depending on hardware
 - **High accuracy**: 85-95% detection accuracy (varies by scenario)
-- **Low latency**: c100ms detection response time
+- **Low latency**: c100ms detection response time
 
-## 🔒 Privacy 6 Ethics
 
-- This system is designed for safety and emergency response
-- Ensure proper consent and privacy compliance when deploying
-- Consider local data processing for privacy-sensitive environments
-- Regular testing and validation are essential for safety-critical applications
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - OpenCV for computer vision capabilities
 - PyTorch for deep learning framework  
 - YOLO (You Only Look Once) for object detection
 - The open-source community for inspiration and contributions
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/your-username/drowning-detection/issues) page
-2. Create a new issue with detailed information
-3. Join our community discussions
-
-## 🎯 Future Enhancements
-
-- [ ] Support for multiple camera feeds
-- [ ] Integration with alarm systems
-- [ ] Mobile app for remote monitoring
-- [ ] Advanced analytics and reporting
-- [ ] Cloud deployment options
-- [ ] Model retraining capabilities
-
----
-
-**⚠️ Important Note**: This system is designed to assist human lifeguards and should not be used as the sole safety measure. Always ensure proper human supervision around water bodies.
-
-https://pjreddie.com/darknet/yolo/

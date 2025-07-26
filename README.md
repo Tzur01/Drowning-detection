@@ -54,10 +54,13 @@ source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 ```bash
 pip install -r requirements.txt
 ```
-
+make sure to download yolov4.weights and add it inside models/yolo/..
 ### Usage
 
 #### Basic Usage
+
+ create an videos/ folder and put inside it videos/sampels 
+
 ```bash
 python DrownDetect.py --source video_filename.mp4
 ```

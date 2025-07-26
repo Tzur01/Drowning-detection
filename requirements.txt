@@ -1,0 +1,15 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.20.0
+opencv-python>=4.5.0
+Pillow>=9.0.0
+scikit-learn>=1.0.0
+joblib>=1.0.0
+
+# Utilities
+requests>=2.25.0
+
+# Optional: Development dependencies
+# black>=22.0.0
+# flake8>=4.0.0
+# pytest>=6.0.0

@@ -6,7 +6,7 @@
 
 A computer vision-based system for real-time drowning detection using deep learning and object detection algorithms. This system can analyze video feeds from cameras around pools or water bodies to automatically detect potential drowning incidents and alert caregivers.
 
-## ✨ Features
+## ✨ Features ✨
 
 - **Real-time Detection**: Process live video feeds or recorded videos
 - **Dual Detection Methods**: 
@@ -17,7 +17,7 @@ A computer vision-based system for real-time drowning detection using deep learn
 - **Easy Configuration**: Centralized configuration system
 - **Developer Friendly**: Clean, modular code with comprehensive documentation
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 src/
@@ -34,7 +34,7 @@ sound/                 # Alert sound files
 DrownDetect.py         # Main execution script
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
